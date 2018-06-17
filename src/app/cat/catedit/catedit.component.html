@@ -1,0 +1,11 @@
+<input type="number" disabled [(ngModel)]="cid">
+<br>
+<input type="text" [(ngModel)]="cname">
+<br>
+<select>
+  <option [(ngModel)]="cactive" *ngFor="let item of arr">{{item}}</option>
+</select>
+<br>
+<button (click)="onupdate()">
+  update cat
+</button>

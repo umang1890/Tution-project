@@ -1,0 +1,12 @@
+.main
+{
+border:2px solid black;
+height:350px;
+border-radius:10px;
+width:500px;
+margin-left:100px;
+margin-top:30px;
+}
+font{
+font-size: 15px;
+}

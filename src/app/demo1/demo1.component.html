@@ -1,0 +1,33 @@
+<input [value]="x" type="">
+<br>
+<table>
+<tr>
+  <td><button (click)="onclick1(1)">1</button></td>
+  &nbsp;<td><button (click)="onclick1(2)">2</button></td>
+  &nbsp;<td><button (click)="onclick1(3)">3</button></td>
+  &nbsp;<td><button (click)="onadd()">+</button></td>
+</tr>
+<tr>
+  <td><button (click)="onclick1(4)">4</button></td>
+  &nbsp;<td><button (click)="onclick1(5)">5</button></td>
+  &nbsp;<td><button (click)="onclick1(6)">6</button></td>
+  &nbsp;<td><button (click)="onsub()">-</button></td>
+</tr>
+<tr>
+  <td><button (click)="onclick1(7)">7</button></td>
+  &nbsp;<td><button (click)="onclick1(8)">8</button></td>
+  &nbsp;<td><button (click)="onclick1(9)">9</button></td>
+  &nbsp;<td><button (click)="ondiv()">/</button></td>
+</tr>
+<tr>
+  <td><button (click)="onclick1(0)">0</button></td>
+  &nbsp;<td><button (click)="oneq()">=</button></td>
+  &nbsp;<td><button (click)="once()">ce</button></td>
+  &nbsp;<td><button  (click)="onmul()">*</button></td>
+
+</tr>
+
+</table>
+
+<input [(ngModel)]='a' type="txt">
+<h1>{{a}}</h1>

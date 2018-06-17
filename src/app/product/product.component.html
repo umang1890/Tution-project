@@ -1,0 +1,160 @@
+<b>
+  <h1 style="margin-left: 500px; font-size: 50px; font-family:'Times New Roman';">Product details</h1>
+  <div *ngIf="flag" class="main">
+
+
+    <table>
+      <br>
+      <tr>
+        &nbsp;
+        <td>product id</td>
+        &nbsp;&nbsp;
+        <td>
+          <input placeholder=" p_id" style="border-radius: 10px;" [(ngModel)]="p_id" type="number"> </td>
+      </tr>
+      <br>
+
+      <tr>
+        &nbsp;
+        <td>product name</td>
+        &nbsp;&nbsp;
+        <td>
+          <input [(ngModel)]="p_name" placeholder=" name" style="border-radius: 10px;" type="text"> </td>
+      </tr>
+      <br>
+
+      <tr>
+        &nbsp;
+        <td>product price</td>
+        &nbsp;&nbsp;
+        <td>
+          <input [(ngModel)]="p_price" placeholder="price" style="border-radius: 10px;" type="number">
+        </td>
+      </tr>
+      <br>
+
+      <tr>
+        &nbsp;
+        <td>product img</td>
+        &nbsp;&nbsp;
+        <td>
+          <input type="txt" style="border-radius: 10px;"> </td>
+      </tr>
+      <br>
+      <br>
+      <tr>
+        &nbsp;
+        <td> status </td>
+        <select [(ngModel)]="p_status">
+          <option>
+            yes
+          </option>
+          <option>
+            no
+          </option>
+
+        </select>
+      </tr>
+
+
+
+      <tr style="align-self: center;">
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        <td>
+          <input (click)="onadd()" style="margin-left: 145px; height:30px; width:100px;" type="button" value="ok">
+        </td>
+      </tr>
+    </table>
+  </div>
+  <br>
+
+  <div class="container">
+    <div class="row">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid" style="background-color: lightcoral; color:white; border-radius:16px;">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+              aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#" style="color:white;">umang</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li>
+                <a style="color:white; font-family:Times New Roman; font-size:20px;" href="#" (click)=onadd1()>Add Product
+                  <!-- <span class="sr-only">(current)</span> -->
+                </a>
+              </li>
+              <li>
+                <a href="#" style="color:white;">About</a>
+              </li>
+
+            </ul>
+
+
+          </div>
+          <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+      </nav>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="list-group">
+          <li class="list-group-item" style="color:palevioletred;">
+            <span class="badge">14</span>
+            Computer
+          </li>
+          <li class="list-group-item" style="color:palevioletred;">
+            <span class="badge">14</span>
+            Mobile
+          </li>
+          <li class="list-group-item" style="color:palevioletred;">
+            <span class="badge">14</span>
+            Laptop
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-9">
+        <div class="row">
+          <div *ngFor="let item of arr" class="col-sm-6 col-md-4">
+            <div class="thumbnail" style="background-color: teal">
+
+              <div class="caption">
+                <b>
+                  <h3 style="color:white;">{{item.p_id}}</h3>
+                  <p style="color:white;">{{item.p_name}}</p>
+                  <p style="color:white;">{{item.p_price}}</p>
+                  <p style="color:white;">{{item.p_status}}</p>
+
+                </b>
+                <button (click)="ondelete(item)" type="button" class="btn btn-default">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </button>
+                |
+                <button (click)="onupdate(item)" class="btn btn-default">
+                  <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <nav class="navbar " style="background-color: slateblue"></nav>
+    </div>
+  </div>

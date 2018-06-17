@@ -1,0 +1,15 @@
+<input type="number" disabled [(ngModel)]="eid">
+<br>
+<input type="text" [(ngModel)]="ename">
+<br>
+gender
+<input [(ngModel)]="egender" type="radio" value="male" name="empgender">male
+<input [(ngModel)]="egender" type="radio" value="female" name="empgender">female
+<br>
+<select>
+  <option [(ngModel)]="estatus" *ngFor="let item of arr">{{item}}</option>
+</select>
+<br>
+<button (click)="onupdate()">
+  update cat
+</button>
